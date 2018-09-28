@@ -1,0 +1,27 @@
+.searchbar input {
+    flex-basis: 50%;
+    border: 2px solid #f7f7f7;
+    border-radius: 200px;
+    outline: none;
+    height:30px;
+    transition-delay: .2;
+    transition-duration: .5s;
+    padding: 15px;
+    font-size: 24px;
+    box-shadow: 1px, 1px, 1px, 1px rgba(0,0,0,0.3);
+}
+
+.searchbar input:focus{
+    border-color: #87cbff;
+}
+.searchbar, .searchbar form{
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 150px;
+}
+
+#searchbar-input{
+    width: 80%;
+}
