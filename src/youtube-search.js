@@ -10,17 +10,19 @@ const API_KEY = `AIzaSyDGZR49dQUWFBWNuSoNipYDZelDSblIYh4`;
 
 
 class YoutubeSearchApp extends Component {
+    // test
+
   constructor(props){
     super(props);
     this.state = {
-      videos: [], 
+      videos: [],
       selectedVideo: null,
       term: "hotdog"
     };
-    
+
     this.videoSearch(this.state.term);
-  } 
-  
+  }
+
    videoSearch(term){
          YTSearch({key: API_KEY, term: term}, videos=>{
          this.setState({
@@ -29,17 +31,17 @@ class YoutubeSearchApp extends Component {
         })
       })
      }
- 
-  
+
+
   render() {
     return (
       <div className="container">
           <SearchBar videoSearch={term=>this.videoSearch(term)} />
           <div className="mid-container">
             <VideoDetail video={this.state.selectedVideo} />
-                
-            <VideoList 
-              onClickVideo={ video=> this.setState({selectedVideo: video}) } 
+
+            <VideoList
+              onClickVideo={ video=> this.setState({selectedVideo: video}) }
               videos={this.state.videos} />
           </div>
       </div>
